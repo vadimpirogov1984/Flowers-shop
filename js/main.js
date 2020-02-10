@@ -85,19 +85,86 @@ $(document).ready(function() {
   }
 });
 
+// // Отправка заявки
+// $(document).ready(function() {
+//   $("#form").submit(function() {
+//     // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
+//     if (document.form.name.value == "" || document.form.tel.value == "") {
+//       valid = false;
+//       return valid;
+//     }
+//     $.ajax({
+//       type: "POST",
+//       url: "php/mail.php",
+//       data: $(this).serialize()
+//     }).done(function() {
+//       $(".js-overlay-thank-you").fadeIn();
+//       $(this)
+//         .find("input")
+//         .val("");
+//       $("#form").trigger("reset");
+//     });
+//     return false;
+//   });
+// });
+
+// // Закрыть попап «спасибо»
+// $(".js-close-thank-you").click(function() {
+//   // по клику на крестик
+//   $(".js-overlay-thank-you").fadeOut();
+// });
+
+// $(document).mouseup(function(e) {
+//   // по клику вне попапа
+//   var popup = $(".popup");
+//   if (e.target != popup[0] && popup.has(e.target).length === 0) {
+//     $(".js-overlay-thank-you").fadeOut();
+//   }
+// });
+
+// // Маска ввода номера телефона (плагин maskedinput)
+// $(function($) {
+//   $('[name="phone"]').mask("+7(999) 999-9999");
+// });
+// Отправка заявки
+
 $(document).ready(function() {
-  $("#form").submit(function() {
+  $("#form1").submit(function() {
+    // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
+    if (document.form1.name1.value == "" || document.form1.phone1.value == "") {
+      valid = false;
+      return valid;
+    }
     $.ajax({
       type: "POST",
-      // url: "mail.php",
+      url: "php/mail.php",
       data: $(this).serialize()
     }).done(function() {
+      $(".js-overlay-thank-you").fadeIn();
       $(this)
         .find("input")
         .val("");
-      alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
-      $("#form").trigger("reset");
+      $("#form1").trigger("reset");
     });
     return false;
   });
+});
+
+// Закрыть попап «спасибо»
+$(".js-close-thank-you").click(function() {
+  // по клику на крестик
+  $(".js-overlay-thank-you").fadeOut();
+});
+
+$(document).mouseup(function(e) {
+  // по клику вне попапа
+  var popup = $(".popup");
+  if (e.target != popup[0] && popup.has(e.target).length === 0) {
+    $(".js-overlay-thank-you").fadeOut();
+  }
+});
+
+// Маска ввода номера телефона (плагин maskedinput)
+$(function($) {
+  $('[name="phone1"]').mask("+7(999) 999-9999");
 });

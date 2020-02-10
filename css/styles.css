@@ -1,3 +1,4 @@
+/* Основные стили */
 *,
 *::before,
 *::after {
@@ -29,7 +30,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  font-weight: 100;
+  font-weight: 200;
   line-height: 24px;
   color: #000000;
   font-size: 14px;
@@ -51,6 +52,7 @@ h2 {
   color: #590212;
   font-weight: bold;
   margin: 0;
+  line-height: 50px;
 }
 
 h3 {
@@ -70,13 +72,13 @@ p {
   color: white;
   padding: 15px 40px;
   background: #590212;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  /* -webkit-transition: 0.5s; */
+  transition: all 0.5s;
   border: none;
   cursor: pointer;
   text-transform: uppercase;
 }
-
+/* Стили хедера */
 header {
   background: #8c8523;
   position: fixed;
@@ -112,16 +114,19 @@ header {
   margin-top: 20px;
 }
 
+/* Логотип  */
+
 .logo {
   font-size: 18px;
   font-weight: normal;
-  text-align: top;
 }
 .logo::before {
   content: url(../images/logo.png);
   padding-right: 15px;
   vertical-align: middle;
 }
+
+/* Контакты, телефон и почта */
 
 .top-contacts {
   display: -webkit-box;
@@ -136,22 +141,17 @@ header {
   text-transform: uppercase;
   text-decoration: none;
 }
-/* .top-contacts p:hover {
-  background: #ffffff;
-  color: #8c8523;
-} */
+
 .top-contacts a {
   color: #ffffff;
-    border-bottom: 2px solid transparent;
+  border-bottom: 2px solid transparent;
   padding: 5px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 .top-contacts a:hover {
-  /* background: #ffffff;
-  color: #8c8523; */
   border-bottom: 2px solid #ffffff;
-  /* text-decoration: underline; */
 }
 
 .phone {
@@ -162,6 +162,8 @@ header {
   padding-right: 5px;
   vertical-align: middle;
 }
+
+/* Пункты меню навигации */
 
 .topnav {
   width: 577px;
@@ -179,7 +181,7 @@ header {
   font-weight: normal;
   color: #ffffff;
   -webkit-transition: 0.5s;
-  transition: 0.5s;
+  transition: all 0.5s;
   text-decoration: none;
 }
 .topnav a:hover {
@@ -192,13 +194,15 @@ header {
   display: none;
 }
 
+/* Главный экран */
+
 .main__screen {
   background: url("../images/main-photo.jpg") top center no-repeat;
   height: 800px;
 }
 .main__screen span {
   display: inline-block;
-  margin-top: 190px;
+  margin-top: 210px;
   font-size: 24px;
   color: #8c8523;
 }
@@ -223,15 +227,12 @@ button:hover {
   background: #ffffff;
   color: #590212;
   border: 1px solid #590212;
-  /* -webkit-transform: translateY(-3px);
-  transform: translateY(-3px); */
 }
 button {
   border: 1px solid transparent;
-  /* -webkit-transform: translateY(-3px);
-  transform: translateY(-3px); */
 }
 
+/* Секция "О нас". */
 
 .cont {
   display: -webkit-box;
@@ -239,13 +240,13 @@ button {
   display: flex;
 }
 
+/* Первый блок. */
+
 .about__img {
   margin-left: -149px;
   height: 450px;
 }
-/* .about__img img{
-  height: 100%;
-} */
+
 .about__title {
   padding-top: 55px;
   padding-left: 40px;
@@ -256,9 +257,14 @@ button {
 .about__title p {
   margin: 24px 0 30px 0;
 }
+.about__title p:last-child {
+  margin: 24px 0 0 0;
+}
 .about__title h2 {
   margin-bottom: 40px;
 }
+
+/* Второй блок. */
 
 .about__title-service {
   margin-right: 35px;
@@ -273,6 +279,8 @@ button {
   margin-right: -151px;
   height: 450px;
 }
+
+/* Секция "Галеря букетов". */
 
 .gallery {
   text-align: center;
@@ -301,8 +309,6 @@ button {
 }
 .gallery input:checked + label {
   color: #fff;
-  color-background: #424b5a;
-  color-transition: 0.2s ease transform;
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -358,12 +364,11 @@ button {
   margin: 27px 37px;
   border: 2px solid #8c8523;
   cursor: pointer;
+  transition: all 0.5s;
 }
-.gallery .df .tabs-fx .tabs-cards .card:hover{
+.gallery .df .tabs-fx .tabs-cards .card:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-  /* transform: translateY(-1px); */
   transform: scale(1.05);
-  transition: 0.3s;
 }
 .gallery .df .tabs-fx .tabs-cards .card p {
   color: #8c8523;
@@ -374,13 +379,12 @@ button {
 .gallery .df .tabs-fx .tabs-cards .card span {
   color: #8c8523;
 }
-.gallery .df .tabs-fx .tabs-cards .card .img{
+.gallery .df .tabs-fx .tabs-cards .card .img {
   height: 270px;
   width: 255px;
 }
 .gallery .df .tabs-fx .tabs-cards .card img {
   border-bottom: 2px solid #8c8523;
-
 }
 .gallery .df .tabs-fx .tabs-cards .card .btn__card {
   font-size: 14px;
@@ -404,14 +408,18 @@ button {
 .gallery #tab4:checked ~ #content4 {
   display: block;
 }
-.gallery h2{
+.gallery h2 {
   margin-bottom: 25px;
+  padding-top: 55px;
 }
+
+/* Секция "Отзывы". */
 
 .reviews__slider {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 35px;
 }
 .reviews__slider .reviews__text {
   width: 347px;
@@ -429,12 +437,9 @@ button {
   margin: 0 auto;
   width: 1250px;
   overflow-x: hidden;
-  /* position: absolute; */
   margin-right: -145px;
 }
-.sl_slides {
-  /* padding: 0 20px; */
-}
+
 .sl_slide {
   display: flex;
   width: 1480px;
@@ -445,9 +450,7 @@ button {
   background-color: #fff;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
   border: 2px solid #8c8523;
-  /* margin-top: 5px; */
   margin-right: 60px;
-  /* width: 500px; */
   min-width: 0;
 }
 .sl_slides .sl__slide img {
@@ -474,11 +477,9 @@ button {
   margin-right: 20px;
 }
 .slick-prev:hover {
-  /* transform: translateX(-3px); */
   opacity: 1;
 }
 .slick-next:hover {
-  /* transform: translateX(3px); */
   opacity: 1;
 }
 .wrapper {
@@ -497,19 +498,18 @@ button {
 .slick-track {
   display: flex;
 }
-/* Заказ и доставка */
+/*Секция "Заказ и доставка". */
 .order {
-  /* text-align: center; */
   margin: 60px 0;
 }
 .order h2 {
   margin-bottom: 30px;
   text-align: center;
+  padding-top: 55px;
 }
 .order__blocks {
   display: flex;
   background: url(../images/order-bg.png) no-repeat;
-  /* box-sizing: cover; */
   background-size: cover;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
 }
@@ -539,11 +539,7 @@ button {
 .second__article {
   margin-bottom: 130px;
 }
-/* .block__left:hover {
-  background: #000;
-  opacity: 0.3;
-  color: #fff;
-} */
+
 .block__right {
   background-color: #d9d7b8;
   opacity: 0.7;
@@ -554,11 +550,12 @@ button {
   padding-right: 60px;
   box-sizing: border-box;
 }
-/* Стили блока заказа */
+/* Секция "Вы можете оставить заявку" */
 .ord {
   margin: 50px 0;
 }
 .ord h2 {
+  padding-top: 55px;
   margin-bottom: 70px;
   text-align: center;
 }
@@ -566,41 +563,44 @@ button {
   display: flex;
   width: 800px;
   margin: 0 auto;
+  padding-bottom: 104px;
 }
 .ord__left {
   padding-right: 60px;
 }
-.ord_subtitle{
+.ord_subtitle {
   padding-top: 50px;
 }
-.ord__right{
+.ord__right {
   margin-top: 10px;
 }
-label{
+label {
   margin-left: 28px;
 }
+
+/* Стилизация чек-боксов */
+
 label input {
-  display: none;/* <--скрываем дефолтный чекбокс */
+  display: none;
 }
-label span {/* <-- стилизируем новый */
+label span {
   height: 17px;
   width: 17px;
   border: 1px solid #590212;
   display: inline-block;
   position: relative;
-  background-color:#ffffff;
-  border-radius:2px;
+  background-color: #ffffff;
+  border-radius: 2px;
   left: -28px;
   cursor: pointer;
-  /* padding-right:10px; */
 }
-[type=checkbox]:checked + span:before {/* <-- ставим иконку, когда чекбокс включен  */
-  content: '\2714';
+[type="checkbox"]:checked + span:before {
+  content: "\2714";
   position: absolute;
   top: -11px;
   left: -3px;
-  font-size:35px;
-  color:#590212;
+  font-size: 35px;
+  color: #590212;
 }
 .ord__title {
   color: #8c8523;
@@ -608,14 +608,11 @@ label span {/* <-- стилизируем новый */
 }
 .ord__message {
   margin-top: 28px;
-  /* margin-bottom: 50px; */
   padding: 0;
 }
 .cover {
-  /* background: #ccc; */
   width: 366px;
   margin: auto;
-  /* padding-left: 60px; */
 }
 
 h2.contact {
@@ -629,13 +626,14 @@ h2.contact {
 
 p.contact {
   font-size: 24px;
-  /* margin-bottom: 15px; */
   line-height: 36px;
   font-family: sans-serif, Arial;
   color: #4b4b4b;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
   display: none;
 }
+
+/* Стили формы обратной связи */
 
 #contact {
   margin-bottom: 0px;
@@ -677,20 +675,16 @@ input[type="submit"] {
   text-transform: uppercase;
   font-size: 14px;
   background-color: #590212;
-  padding: 15px auto;
   width: 400px;
   height: 40px;
   margin-bottom: 0;
+  transition: all 0.5s;
 }
 
 input[type="submit"]:hover {
-    background: #ffffff;
-    color: #590212;
-    border: 1px solid #590212;
-    /* -webkit-transform: translateY(-3px);
-    transform: translateY(-3px); */
-    transition: 0.5s;
-  }
+  background: #ffffff;
+  color: #590212;
+  border: 1px solid #590212;
 }
 
 input[type="submit"]:active {
@@ -708,67 +702,61 @@ input[type="submit"]:active {
   background: url(../images/icon-name.png) no-repeat;
   background-position: 10px;
 }
-/* Блок контактов */
-.contacts h2{
+/* Секция "Контакты" */
+.contacts h2 {
   text-align: center;
+  padding-top: 7px;
 }
-.contacts{
+.contacts {
   height: 555px;
-  /* margin-bottom: 40px; */
   position: relative;
 }
 .wrp {
-	max-width: 900px;
-	margin: 0 auto;
-	position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
 }
-.map-box { 
-	position: absolute;
-	top: 130px;
-	left: 270px; 
-	padding: 50px 90px;
+.map-box {
+  position: absolute;
+  top: 35px;
+  left: 270px;
+  padding: 50px 90px;
   background: #8c8523;
   color: #ffffff;
-	/* border: 1px solid #ddd; */
-  /* width: 387px;
-  height: 175px; */
   box-shadow: -1px -1px 24px 0px rgba(50, 50, 50, 0.5);
   display: flex;
   justify-content: center;
   text-align: center;
 }
 .map-box p {
-	font-size: 14px;
+  font-size: 14px;
 }
 #map {
-	width: 100%; 
-  height: 485px;
-  margin-top: 70px;
-  /* margin-bottom: 40px; */
+  width: 100%;
+  height: 330px;
+  margin-top: 80px;
   position: absolute;
 }
-.map-box span{
+.map-box span {
   font-size: 20px;
-
 }
 .map__content a,
-.map__content p{
+.map__content p {
   color: #ffffff;
 }
-.footer__container{
+.footer__container {
   background: #8c8523;
   color: #ffffff;
   font-size: 12px;
   line-height: 14px;
   height: 50px;
 }
-.footer__content{
+.footer__content {
   display: flex;
-  /* align-items: center; */
   justify-content: space-between;
   padding-top: 19px;
 }
-.footer__rights{
+.footer__rights {
   margin-right: 20px;
 }
 /* Стили мобильного меню */
@@ -849,61 +837,93 @@ input[type="submit"]:active {
 .menu.menu_state_open .menu__links {
   display: block;
 }
-.banner{
+.banner {
   height: 150px;
 }
 
-@media screen and (max-width: 999px) {
-  .menu__icon {
-    display: inline-block;
-    float: right;
-    margin-top: -49px;
-    /* margin-right: 10px; */
-  }
-
-  .menu__links {
-    position: fixed;
-    display: none;
-    top: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 63px;
-    background-color: rgba(140, 133, 35, 0.8);
-    z-index: 1000;
-    overflow: auto;
-  }
-
-  .menu__links-item {
-    display: block;
-    padding: 10px 0;
-    text-align: center;
-    color: #ffffff;
-  }
-  .top-contacts{
-    display: none;
-  }
-  /* nav {
-    width: 100%;
-  } */
-  .wrapper {
-    margin: 0 auto;
-    overflow: hidden;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 100%;
-  }
-  .header__wrapper{
-    width: 100%;
-    padding-right: 10px;
-    padding-left: 10px;
-  }
+/* Отступ между секциями, чтобы не перекрывал хедер при переключении */
+.indent {
+  padding-top: 104px;
+  margin-top: -104px;
 }
-@media (min-width: 760px) and (max-width: 960px) {
+
+/* Стили всплывающего окна "Спасибо за заявку" */
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 5555px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 100;
+}
+
+.popup {
+  position: absolute;
+  width: 550px;
+  height: 250px;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  background-color: #8c8523;
+}
+.popup__container {
+  display: flex;
+}
+.popup__text {
+  color: #ffffff;
+  padding: 70px 35px 70px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.popup__text p {
+  display: block;
+  font-size: 20px;
+}
+.popup__text span {
+  display: block;
+}
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  background: #590212;
+}
+
+.close-popup:before {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  left: -4px;
+  transform: rotate(-45deg);
+}
+
+.close-popup:after {
+  content: "";
+  background-color: #ffffff;
+  position: absolute;
+  height: 1px;
+  width: 31px;
+  top: 11px;
+  transform: rotate(45deg);
+  left: -4px;
+}
+
+@media (min-width: 760px) and (max-width: 1024px) {
   .menu__icon {
     display: inline-block;
-    /* margin-right: 10px; */
     color: #8c8523;
+    margin-top: -16px;
   }
   .menu__links {
     position: fixed;
@@ -911,7 +931,7 @@ input[type="submit"]:active {
     top: 0;
     right: 0;
     left: 0;
-    margin-top: 63px;
+    margin-top: 43px;
     width: 100%;
     background-color: rgba(140, 133, 35, 0.8);
     z-index: 1000;
@@ -924,9 +944,11 @@ input[type="submit"]:active {
     text-align: center;
     color: #ffffff;
   }
-  .top-contacts{
+
+  .top-contacts {
     display: none;
   }
+
   .wrapper {
     margin: 0 auto;
     overflow: hidden;
@@ -934,46 +956,49 @@ input[type="submit"]:active {
     padding-right: 10px;
     width: 100%;
   }
-  .header__wrapper{
+
+  .header__wrapper {
     width: 100%;
     padding-right: 10px;
     padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-  .about__title{
+
+  .header__topline {
+    padding: 10px 0;
+  }
+
+  .about__title {
     padding-left: 15px;
     padding-top: 20px;
-    width: 300px;
   }
   .about__title h2 {
     margin-bottom: 20px;
   }
   .about__title p {
     margin: 15px 0 15px 0;
-  } 
+  }
   .about__title p:last-child {
-    margin: 15px 0 0 0;
-  } 
+    margin: 15px 0 15px 0;
+  }
   .about__img {
-    margin-left: -271px;
-
+    margin: 0 auto;
   }
   .about__title-service {
-    /* margin-right: 35px; */
-    width: 300px;
-    padding-top: 20px;
-    padding-right: 20px;
+    padding: 20px 0 0 20px;
     margin-right: 0;
+    order: 2;
   }
-.about__img-services {
-  margin-right: -232px;
-  height: 450px;
+  .about__img-services {
+    margin: 0 auto;
+    height: 450px;
   }
   .about__title-service h3 {
     margin-top: 0;
   }
-  .bouquet__decoration{
-    display: none;
-  }
+
   h2 {
     line-height: 45px;
   }
@@ -983,93 +1008,113 @@ input[type="submit"]:active {
     font-size: 24px;
     color: #8c8523;
     width: 229px;
-  } 
+  }
+
   .main__screen h1 {
     margin-top: 15px;
   }
-  .main__screen p{
+
+  .main__screen p {
     display: none;
   }
+
   .btn__main {
     padding: 25px 100px;
     margin: 15px 0 25px 0;
   }
+
   .main__screen {
-    height: 100%;
+    height: 800px;
   }
+
   .slick-arrow {
     cursor: pointer;
     margin-top: 47px;
     opacity: 0.5;
   }
+
   .reviews__slider .reviews__text {
-  width: 380px;
+    width: 380px;
   }
-  .block__left span, .article {
+
+  .block__left span,
+  .article {
     margin-left: 50px;
-    /* padding-right: 88px; */
-    /* padding-left: 50px; */
   }
-  .block__right{
+
+  .block__right {
     padding-bottom: 35px;
   }
+
   .second__article {
     margin-bottom: 0;
   }
-  .block__left span, .article {
+
+  .block__left span,
+  .article {
     margin-left: 50px;
-    /* padding-right: 88px; */
     padding-left: 0;
   }
+
   .ord h2 {
     margin-bottom: 30px;
     text-align: center;
   }
-  input[type="text"], input[type="tel"] {
+
+  input[type="text"],
+  input[type="tel"] {
     width: 270px;
   }
+
   textarea {
     width: 270px;
   }
+
   input[type="submit"] {
     width: 270px;
   }
-  .first__article{
+
+  .first__article {
     padding-bottom: 35px;
-    /* padding-right: 88px; */
     padding-left: 55px;
     padding-right: 10px;
     margin: 0;
   }
-  .second__article{
+
+  .second__article {
     margin: 0;
     padding-left: 55px;
     padding-right: 10px;
   }
+
   .block__left span {
     display: block;
     margin: 0;
     padding-left: 55px;
     padding-right: 10px;
   }
-  .article{
+
+  .article {
     margin: 0;
     padding-left: 55px;
     padding-right: 10px;
   }
+
   .gallery .df .tabs-fx .tabs-cards {
     width: 737px;
-    margin-left: -151px;
+    margin-left: 0;
     justify-content: center;
   }
-  .gallery .tabs h3{
+
+  .gallery .tabs h3 {
     margin-left: -555px;
   }
-  .gallery label{
+  .gallery label {
     width: 150px;
   }
-  .gallery .tabs{
-    width: 611px;
+  .gallery .df .tabs-fx {
+    margin-left: 0;
+    width: 100%;
   }
   .gallery .df {
     padding-top: 45px;
@@ -1077,24 +1122,21 @@ input[type="submit"]:active {
   .gallery .df .tabs-fx .tabs-cards .card {
     margin: 27px 27px;
   }
-  .slick-slide{
+  .slick-slide {
     width: 419px;
     padding-right: 20px;
   }
-  .banner{
+  .banner {
     display: none;
   }
-  .topnav{
+  .topnav {
     width: 100%;
   }
-  /* .contacts{
-    height: 1000px;
-  } */
-  .map-box{
+  .map-box {
     width: 370px;
     height: 175px;
     margin-left: 165px;
-    margin-top: 164px;
+    margin-top: 85px;
     padding: 0;
     display: flex;
     align-items: center;
@@ -1102,7 +1144,321 @@ input[type="submit"]:active {
     left: 0;
     position: relative;
   }
-  .cover{
-    width: 400px;
+  .cover {
+    width: 100%;
+  }
+  .cont {
+    display: flex;
+    flex-direction: column;
+  }
+  .ord__blocks {
+    width: 100%;
+    max-width: 800px;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .menu__icon {
+    display: inline-block;
+    float: right;
+    margin-top: -16px;
+  }
+  .menu__links {
+    position: fixed;
+    display: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 43px;
+    background-color: rgba(140, 133, 35, 0.8);
+    z-index: 1000;
+    overflow: auto;
+  }
+  .menu__links-item {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+  }
+  .top-contacts {
+    display: none;
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+  }
+  .cont {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__title-service {
+    padding: 20px 0 0 0;
+    margin-right: 0;
+    order: 2;
+  }
+  .banner {
+    display: none;
+  }
+  .about__title p:last-child {
+    margin: 24px 0 30px 0;
+  }
+  .about__img-services {
+    margin: 0;
+    height: 100%;
+  }
+  .about__img-services img {
+    width: 100%;
+  }
+  .about__img {
+    height: 100%;
+    margin: 0 auto;
+  }
+  .about__img img {
+    width: 100%;
+  }
+
+  .gallery .tabs {
+    display: contents;
+  }
+
+  .about__title {
+    padding: 20px 0 0 0;
+  }
+
+  .header__wrapper {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__topline {
+    padding: 10px 0;
+  }
+  .topnav {
+    width: 100%;
+  }
+  .main__screen {
+    height: 100%;
+  }
+  .btn__main {
+    margin: 50px 20px;
+  }
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 759px) {
+  .gallery .df .tabs-fx .tabs-cards .card {
+    margin: 10px;
+  }
+  .gallery .df .tabs-fx {
+    margin-left: 0;
+    width: 100%;
+  }
+  .cover {
+    width: 100%;
+  }
+  input[type="text"],
+  input[type="tel"] {
+    width: 270px;
+  }
+
+  textarea {
+    width: 270px;
+  }
+
+  input[type="submit"] {
+    width: 270px;
+  }
+
+  .ord__blocks {
+    width: 100%;
+  }
+  .wrp {
+    display: flex;
+    justify-content: center;
+  }
+  .map-box {
+    position: static;
+    width: 230px;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .topnav {
+    width: 100%;
+  }
+  .menu__icon {
+    display: inline-block;
+    float: right;
+    margin-top: -40px;
+  }
+  .header__topline {
+    padding: 10px 0;
+  }
+  .header__wrapper {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .menu__icon {
+    display: inline-block;
+    float: right;
+    margin-top: -16px;
+  }
+  .main__screen h1 {
+    margin-top: 15px;
+    font-size: 80px;
+    line-height: 95px;
+  }
+  .main__screen {
+    height: 580px;
+  }
+  .cont {
+    display: flex;
+    flex-direction: column;
+  }
+  .about__title {
+    padding-left: 0;
+  }
+  .about__title-service {
+    order: 2;
+    margin-right: 0;
+  }
+  .banner {
+    display: none;
+  }
+  .gallery h2 {
+    line-height: 50px;
+  }
+  .gallery .tabs {
+    display: contents;
+  }
+  .gallery label {
+    width: 320px;
+    padding: 10px;
+  }
+  .gallery .df .tabs-fx .tabs-cards .card {
+    margin-top: 30px;
+    margin-left: 173px;
+  }
+  .gallery .df .tabs-fx .tabs-cards {
+    width: 100%;
+  }
+  .gallery .df {
+    padding-top: 0;
+  }
+  .menu__links {
+    min-height: 580px;
+  }
+  .topnav a {
+    padding: 20px 10px;
+  }
+  .indent {
+    padding-top: 50px;
+    margin-top: -50px;
+  }
+  .order__blocks {
+    flex-direction: column;
+  }
+  .ord__blocks {
+    flex-direction: column;
+  }
+  .cover {
+    margin: 0;
+    width: 365px;
+  }
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    width: 343px;
+  }
+  input[type="submit"] {
+    width: 343px;
+  }
+  .ord_subtitle {
+    padding: 25px 0;
+  }
+  .reviews__slider {
+    display: flex;
+    flex-direction: column;
+  }
+  .slick-slide {
+    width: 300px;
+    padding-right: 10px;
+  }
+  .sl_slides .sl__slide img {
+    width: 100%;
+  }
+  .main {
+    margin: 0;
+    width: 348px;
+  }
+  .sl__slide {
+    width: 100%;
+  }
+  .slick-arrow {
+    margin-top: 44px;
+  }
+  .ord__blocks {
+    width: 100%;
+  }
+  .ord__left {
+    padding-right: 0;
+  }
+  .block__left span {
+    display: block;
+    margin: 0;
+    padding: 0 10px;
+  }
+  .block__left span,
+  .article {
+    margin: 0;
+    padding: 0 10px;
+  }
+  .first__article {
+    margin: 0;
+    padding: 0 10px 35px 10px;
+  }
+  .first__article,
+  .second__article {
+    margin: 0;
+    padding: 0 10px 35px 10px;
+  }
+  .article {
+    padding-bottom: 35px;
+  }
+  .reviews__text {
+    order: 2;
+  }
+  .btn__main {
+    margin: 50px 20px;
+  }
+  .about__title h2 {
+    text-align: center;
+  }
+  .main__screen {
+    background: url(../images/main-photo.jpg) no-repeat;
+    background-position-x: -244px;
+  }
+  .wrp {
+    max-width: 900px;
+    margin: 0;
+    position: absolute;
+  }
+  .map-box {
+    left: 44px;
+    padding: 30px 50px;
+  }
+  #map {
+    height: 415px;
+    margin-top: 95px;
   }
 }
