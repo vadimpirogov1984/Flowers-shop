@@ -309,12 +309,12 @@ button {
 }
 .gallery input:checked + label {
   color: #fff;
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
 }
 .gallery label {
   display: inline-block;
-  margin: 0 0 -1px;
+  margin: 0 0 -3px;
   padding: 5px;
   width: 190px;
   font-weight: 600;
@@ -326,7 +326,7 @@ button {
   position: relative;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  margin-right: -4px;
+  border: 2px solid transparent;
 }
 .gallery label:hover {
   color: #8c8523;
@@ -767,7 +767,7 @@ input[type="submit"]:active {
 
 .menu__icon {
   display: none;
-  width: 45px;
+  width: 35px;
   height: 35px;
   position: relative;
   cursor: pointer;
@@ -1316,7 +1316,7 @@ input[type="submit"]:active {
   }
   .main__screen h1 {
     margin-top: 15px;
-    font-size: 80px;
+    font-size: 65px;
     line-height: 95px;
   }
   .main__screen {
@@ -1343,18 +1343,39 @@ input[type="submit"]:active {
     display: contents;
   }
   .gallery label {
-    width: 320px;
+    width: 95%;
     padding: 10px;
+  }
+  .gallery .df .tabs-fx {
+    width: 100%;
+    margin: 0;
   }
   .gallery .df .tabs-fx .tabs-cards .card {
     margin-top: 30px;
-    margin-left: 173px;
-  }
-  .gallery .df .tabs-fx .tabs-cards {
+    margin: 27px 0px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
   }
-  .gallery .df {
+  .gallery .df .tabs-fx .tabs-cards {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .gallery .df .tabs-fx .tabs-cards .card .img {
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .gallery .df .tabs-fx .tabs-cards .card img  {
+    width: 100%;
+  }
+  .card__title {
     padding-top: 0;
+  }
+  .gallery .df {
+    padding: 0;
   }
   .menu__links {
     min-height: 580px;
@@ -1370,6 +1391,7 @@ input[type="submit"]:active {
     flex-direction: column;
   }
   .ord__blocks {
+    padding-bottom: 0;
     flex-direction: column;
   }
   .cover {
@@ -1392,18 +1414,32 @@ input[type="submit"]:active {
     flex-direction: column;
   }
   .slick-slide {
-    width: 300px;
-    padding-right: 10px;
+    width: 100%;
+    margin-left: -5px;
+    padding: 0 5px;
+    display: flex;
+  }
+  .sl_slides .sl__slide {
+    display: flex;
+    min-height: 100%;
   }
   .sl_slides .sl__slide img {
     width: 100%;
   }
   .main {
     margin: 0;
-    width: 348px;
+    width: 100%;
+  }
+  .main__screen span {
+    margin-top: 35%;
+  }
+  .sl_slides .sl__slide {
+    display: flex;
+    flex-direction: column;
   }
   .sl__slide {
     width: 100%;
+
   }
   .slick-arrow {
     margin-top: 44px;
@@ -1440,7 +1476,7 @@ input[type="submit"]:active {
     order: 2;
   }
   .btn__main {
-    margin: 50px 20px;
+    margin: 50px 20px 50px 0;
   }
   .about__title h2 {
     text-align: center;
