@@ -66,7 +66,10 @@ h3 {
 p {
   margin: 0;
 }
-
+.body__wrap {
+  overflow-x: hidden;
+  padding: 0 15px;
+}
 .btn__my {
   font-size: 12px;
   color: white;
@@ -90,7 +93,7 @@ header {
 
 .header__wrapper {
   margin: 0 auto;
-  width: 1170px;
+  max-width: 1170px;
 }
 
 .header__topline {
@@ -132,7 +135,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 799px;
+  margin-left: auto;
   color: #ffffff;
 }
 .top-contacts p {
@@ -239,6 +242,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
 }
 
 /* Первый блок. */
@@ -436,9 +440,9 @@ button {
 /* Стили слайдера */
 .main {
   margin: 0 auto;
-  width: 1250px;
+  max-width: 1250px;
   overflow-x: hidden;
-  margin-right: -145px;
+  /*margin-right: -145px;*/
 }
 
 .sl_slide {
@@ -485,7 +489,8 @@ button {
 }
 .wrapper {
   margin: 0 auto;
-  width: 1140px;
+  padding: 0 15px;
+  max-width: 1140px;
 }
 .reviews__slider .reviews__text {
   width: 347px;
@@ -716,6 +721,9 @@ input[type="submit"]:active {
   max-width: 900px;
   margin: 0 auto;
   position: relative;
+}
+.quality__control {
+  max-width: 100%;
 }
 .map-box {
   position: absolute;
